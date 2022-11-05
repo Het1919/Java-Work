@@ -1,0 +1,17 @@
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+
+public class Date04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ZoneId zone = ZoneId.systemDefault();
+		ZonedDateTime zdt = ZonedDateTime.now();
+		System.out.println(zone);
+		System.out.println(zdt);
+
+	}
+
+}
+

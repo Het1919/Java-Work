@@ -1,0 +1,16 @@
+
+class MyFrame6 extends MyFrame
+{
+	
+}
+public class ListBoxDemo {
+
+	public static void main(String[] args) {
+		
+		MyFrame6 f=new MyFrame6();
+		f.setSize(400,400);
+		f.setVisible(true);
+
+	}
+
+}

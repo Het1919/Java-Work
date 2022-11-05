@@ -1,0 +1,20 @@
+import java.util.*;
+
+public class Stream01 {
+
+	public static void main(String[] args) {
+		
+		List<Integer> nums = Arrays.asList(6,5,2,8,1,7);
+		
+		int sum=0;
+		for(int n:nums) {
+			if(n%2==1)
+			{
+				sum+=(n*2);
+			}
+		}
+		System.out.println(sum);
+
+	}
+
+}

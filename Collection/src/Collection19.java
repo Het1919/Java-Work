@@ -1,0 +1,59 @@
+//Comparable vs Comparator
+import java.util.*;
+
+class Student implements Comparable<Student>
+{
+	int age;
+	String name;
+	String tech;
+	
+	Student(int age,String name,String tech)
+	{
+		this.age=age;
+		this.name=name;
+		this.tech=tech;
+	}
+	
+	@Override
+	public String toString() {
+		return "Student [age=" + age +",name=" + name +",tech=" + tech +"]";
+	}
+	
+	//based on age comparision
+//	public int compareTo(Student that)
+//	{
+//		return this.age-that.age;
+//	}
+	
+	//based on name comparision
+//	public int compareTo(Student that)
+//	{
+//		return this.name.compareTo(that.name);
+//	}
+	
+	//based on names of length
+	public int compareTo(Student that)
+	{
+		return this.tech.length()-that.tech.length();
+	}
+}
+
+public class Collection19 {
+
+	public static void main(String[] args) {
+		
+		Student s1=new Student(19,"Het","Java");
+		Student s2=new Student(20,"Krupa","Cloud");
+		Student s3=new Student(18,"Navin","Blockchain");
+		
+		ArrayList<Student> nums=new ArrayList<>();
+	    nums.add(s1);
+	    nums.add(s2);
+	    nums.add(s3);
+	    
+	    Collections.sort(nums);
+	    
+	    System.out.println(nums);
+	}
+
+}

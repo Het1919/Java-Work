@@ -1,0 +1,37 @@
+import java.lang.annotation.ElementType;
+import java.lang.annotation.*;
+
+@Target({ElementType.TYPE,ElementType.METHOD,ElementType.FIELD})  // Type means class.
+@Retention(RetentionPolicy.RUNTIME) 
+@interface CricketPlayer
+{
+	String gameName() default "Cricket";
+	int runs() default 20000;
+}
+// @ specifies compiler that annotation type is being created.
+
+@CricketPlayer
+class Virat
+{
+	@CricketPlayer
+	private String name;
+	private int age;
+	
+	@CricketPlayer
+	public void disp()
+	{
+		System.out.println("Virat is Indian");
+	}
+}
+
+public class Annotation02 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		Virat v = new Virat();
+		v.disp();
+
+	}
+
+}

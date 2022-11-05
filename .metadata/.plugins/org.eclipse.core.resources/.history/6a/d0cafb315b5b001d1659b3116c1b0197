@@ -1,0 +1,17 @@
+import java.util.*;
+import java.util.stream.Stream;
+
+public class Stream01 {
+
+	public static void main(String[] args) {
+		
+		List<Integer> nums = Arrays.asList(6,5,2,8,1,7);
+		
+		//Stream -> Collection of values
+		Stream<Integer> stream = nums.stream();
+		
+		stream.forEach(n -> System.out.println(n));
+
+	}
+
+}

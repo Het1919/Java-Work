@@ -1,0 +1,39 @@
+import java.util.Arrays;
+import java.util.List;
+import java.util.stream.Stream;
+
+class Student
+{
+	int age;
+	String name;
+	String tech;
+	
+	Student(int age,String name,String tech)
+	{
+		this.name=name;
+		this.age=age;
+		this.tech=tech;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "Student [age=" + age +",name=" + name +",tech=" + tech +"]";
+	}
+}
+public class Stream03 {
+
+	public static void main(String[] args) {
+		
+		Student s1=new Student(19,"Het","Java");
+		Student s2=new Student(20,"Krupa","Cloud");
+		Student s3=new Student(20,"Prathna","Java");
+		Student s4=new Student(19,"Shobha","Web");
+		
+		List<Student> nums = Arrays.asList(s1,s2,s3,s4);
+		
+		Stream<Student> stream1 = nums.stream();
+			
+	}
+
+}

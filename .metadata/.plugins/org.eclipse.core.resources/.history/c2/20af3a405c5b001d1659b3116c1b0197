@@ -1,0 +1,22 @@
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.stream.Stream;
+
+public class Stream01 {
+
+	public static void main(String[] args) {
+		
+		List<Integer> nums = Arrays.asList(6,5,2,8,1,7);
+		
+		//Stream -> Collection of values
+		Stream<Integer> stream1 = nums.stream();
+		Stream<Integer> stream2 = stream1.filter(n -> n%2!=0);
+	
+		
+		stream2.forEach(n-> System.out.println(n));
+		//stream1.forEach(n-> System.out.println(n)); // throws exception. stream can;t be reusable.
+		
+		
+	}
+
+}

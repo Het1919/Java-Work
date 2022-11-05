@@ -1,0 +1,25 @@
+import java.util.*;
+import java.util.function.Consumer;
+import java.util.stream.Stream;
+
+public class Stream01 {
+
+	public static void main(String[] args) {
+		
+		List<Integer> nums = Arrays.asList(6,5,2,8,1,7);
+		
+		//Stream -> Collection of values
+		Stream<Integer> stream = nums.stream();
+		
+		Consumer<Integer> consumer = new Consumer<>() {
+			public void accept(Integer i)
+			{
+				System.out.println(i);
+			}
+		};
+		
+		stream.forEach(consumer);
+
+	}
+
+}

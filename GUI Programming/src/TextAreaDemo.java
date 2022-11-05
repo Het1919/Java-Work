@@ -1,0 +1,48 @@
+import java.awt.*;
+import java.awt.event.*;
+
+class MyFrame5 extends Frame implements ActionListener
+{
+	TextArea ta;
+	TextField tf;
+	Label l;
+	Button b;
+	
+	MyFrame5()
+	{
+		super("TextArea Demo");
+		
+		l=new Label(" No Text Entered ");
+		ta=new TextArea(10,20);
+		tf=new TextField(20);
+		b=new Button("Click");
+		
+		setLayout(new FlowLayout());
+		add(ta);
+		add(l);
+		add(b);
+		add(tf);
+		b.addActionListener(this);
+		
+	}
+	
+	public void actionPerformed(ActionEvent e)
+	{
+//		l.setText(ta.getSelectedText());
+//		ta.append(tf.getText());
+		ta.insert(tf.getText(), ta.getCaretPosition());
+		
+	}
+}
+
+public class TextAreaDemo {
+
+	public static void main(String[] args) {
+		
+		MyFrame5 f=new MyFrame5();
+		f.setSize(400,400);
+		f.setVisible(true);
+
+	}
+
+}

@@ -1,0 +1,16 @@
+public class Date01 {
+
+	public static void main(String[] args) {
+		
+		java.util.Date utilDate = new java.util.Date();
+		System.out.println(utilDate); // Thu Nov 03 16:14:16 IST 2022
+		
+		long time = utilDate.getHours();
+		System.out.println(time);
+		
+		java.sql.Date sqlDate = new java.sql.Date(time);
+		System.out.println(sqlDate);
+
+	}
+
+}

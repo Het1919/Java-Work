@@ -1,0 +1,20 @@
+enum Result1
+{
+	PASS, FAIL, NR;	
+	
+	//public final static Result1 PASS = new Result1(); (B.T.S.)
+	Result1()
+	{
+		System.out.println("Lets how many times");
+	}
+}
+public class Enums04 {
+
+	public static void main(String[] args) {
+		
+		Result1 r = Result1.PASS;
+		Result1 r1 = Result1.FAIL;
+
+	}
+
+}

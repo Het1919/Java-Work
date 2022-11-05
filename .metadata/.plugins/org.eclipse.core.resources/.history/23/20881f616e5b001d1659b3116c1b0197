@@ -1,0 +1,13 @@
+import java.time.ZoneId;
+
+public class Date04 {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		ZoneId zone = ZoneId.systemDefault();
+		System.out.println(zone);
+
+	}
+
+}

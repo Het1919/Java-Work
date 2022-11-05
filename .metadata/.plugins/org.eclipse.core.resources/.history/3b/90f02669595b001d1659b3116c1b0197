@@ -1,0 +1,14 @@
+import java.util.*;
+
+public class Stream01 {
+
+	public static void main(String[] args) {
+		
+		List<Integer> nums = Arrays.asList(6,5,2,8,1,7);
+		
+		
+		System.out.println(nums);
+
+	}
+
+}
